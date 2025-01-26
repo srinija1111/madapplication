@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
+    android:layout_marginTop="10dp"
+    android:layout_marginBottom="10dp"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/editTextName"
+        android:hint="Faculty Name"
+        android:inputType="text"
+        android:layout_width="match_parent"
+        android:layout_marginTop="10dp"
+        android:layout_height="40dp">
+    </EditText>
+
+
+    <Spinner
+        android:id="@+id/spinnerState"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:spinnerMode="dropdown"
+        />
+
+
+
+
+
+    <RadioGroup
+        android:id="@+id/rbGroupGender"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        android:checkedButton="@id/rbMale">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:text="Gender:"
+            android:textSize="20dp">
+        </TextView>
+
+        <RadioButton
+            android:id="@+id/rbMale"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:text="Male"
+            android:textSize="20dp"
+            android:layout_marginLeft="10dp"/>
+
+        <RadioButton
+            android:id="@+id/rbFemale"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:text="Female"
+            android:textSize="20dp"
+            android:layout_marginLeft="10dp"/>
+
+    </RadioGroup>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:text="Date of Join:"
+            android:textSize="20dp"
+            ></TextView>
+
+        <EditText
+            android:id="@+id/editTextDOB"
+            android:hint="DD/MM/YYYY"
+            android:inputType="date"
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:textSize="18dp"
+            android:layout_height="40dp">
+        </EditText>
+
+        <Button
+            android:id="@+id/btnDatePicker"
+            android:layout_width="50dp"
+            android:layout_height="40dp"
+            android:text="..."
+            android:layout_marginLeft="10dp"
+            android:onClick="ShowDatePicker"
+            ></Button>
+
+    </LinearLayout>
+
+
+
+    <Button
+        android:id="@+id/btnSubmit"
+        android:text="SUBMIT"
+        android:onClick="SaveData"
+        android:layout_marginRight="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="40dp">
+    </Button>
+
+</LinearLayout>
